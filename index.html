@@ -36,7 +36,6 @@ body{
     <h3><input type="button" value="Change Name" class="btn" id="w"></h3>
     <script>
        
-      
         document.getElementById("w").addEventListener("click", cn);
 var c="Player 1 ";
 var d="Player 2 ";
@@ -47,20 +46,26 @@ document.getElementById("t").innerHTML=c;
 document.getElementById("v").innerHTML=d;
 }
 
-document.getElementById("z").addEventListener("click",roll);
+document.getElementById("z").addEventListener("click",rol);
 
 
 
-
+function rol(){
+   
+    document.getElementById("img1").setAttribute("src","dice.gif");
+    document.getElementById("img2").setAttribute("src","dice.gif");
+    
+    setTimeout(roll,2000);
+}
 
 function roll(){
-    
+  
 var a=Math.random();
 
-        a=6*a;
+        a=5*a;
         a=Math.round(a)+1;
         var b=Math.random();
-        b=6*b;
+        b=5*b;
         b=Math.round(b)+1;
      
         if(a===1){
@@ -110,6 +115,13 @@ var a=Math.random();
         else if(b>a){
             document.querySelector("h1").innerHTML=d +" Wins!!!";
         }}
+
+
+      
+       
+
+         
+
 
 
 
